@@ -1,0 +1,35 @@
+@author: Marcelo Feliciano Filho
+
+Técnicas de Programação e Introdução a Identificação de Sistemas
+Documentação pysindy: https://pysindy.readthedocs.io/en/latest/
+
+Ao emular o código, tudo que está abaixo de:
+
+if __name__ == '__main__':  # Executa a classe e retorna os dados automaticamente
+
+Será invocado, chamando a classe e imprimindo os gráficos das três situações, além de criar os objetos:
+dict_solution: dicionário com a solução do benchmark
+benchmark: Objeto da classe estruturada
+
+Esse código tem por objetivo realizar a identificação de um sistema utilizando
+o método Sindy com a biblioteca Pysindy:
+    1. Para instalar as bibliotecas necessárias rode no terminal do python com a virtualenv ativada: (caso não esteja)
+       pip install pysindy, matplotlib, sklearn, pandas, numpy;
+
+    2. Emular o código com F5;
+
+    3. Analisar os prints do terminal (modelos) ou
+
+    4. Analisar os objetos dict_solution e benchmark gerados.
+	Ex: Para analisar os resultados de SineSW:
+		dict_solution['SineSW']['modelo'].print() - Irá imprimir as equações do modelo
+		dict_solution['SineSW']['metricas'] - Revela o dicionário com todas as métricas de avaliação utilizadas (MAPE, MAE, MSE, RMSE, R2 e L2).
+	    Para avaliar o objeto benchmark:
+		benchmark.tipos --> Irá apresentar os tipos de sinais de entrada coletados para o benchmark
+	
+	Os gráficos devem ser plotados em áreas específicas, tanto no pycharm, quanto no anaconda spyder (softwares recomendados).
+	Caso use outra IDLE para avaliação considere se essa o possibilita ver gráficos de forma simplificada e dinâmica.
+
+Agradeço desde já pelo trabalho e pela disciplina!
+
+Att.
