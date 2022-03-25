@@ -98,14 +98,14 @@ class IdentifyF16BenchMark:
         model.fit(x_train, t=dt)
         model.print()
         
-        dict_plot = {2: f'{tipo_sis} - Aceleração Eixo X', 3: f'{tipo_sis} - Aceleração Eixo Y', 
-                     4: f'{tipo_sis} - Aceleração Eixo Z'}
+        dict_plot = {2: f'{tipo_sis} - Acceleration Eixo X', 3: f'{tipo_sis} - Acceleration Eixo Y', 
+                     4: f'{tipo_sis} - Acceleration Eixo Z'}
         predito = model.predict(x_train)/100
             
         for index in dict_plot.keys():
             self.plot(x_train, t_train, dict_plot[index], index, predito)
 
-        return {'modelo': model, 'metricas': self.math_err(x_train, predito)}
+        return {'model': model, 'metrics': self.math_err(x_train, predito)}
 
     def plot(self, x_train, t_train, title, index, simulate=array([])):
         """
@@ -135,7 +135,7 @@ class IdentifyF16BenchMark:
                 x_train[: t_train.size, index], label='Real')
         if simulate.size:  # Se não for falso, 
             ax.plot(x_train[: t_train.size, 0], x_train[: t_train.size, 1],
-                    simulate[: t_train.size, index], label='Predito')
+                    simulate[: t_train.size, index], label='Predicted')
         plt.title(title)
         plt.legend(labelcolor='linecolor')
         ax.set(xlabel="$x$", ylabel="$y$", zlabel="$z$")
@@ -203,4 +203,4 @@ if __name__ == '__main__':  # Executa a classe e retorna os dados automaticament
     
     # Imprime no console os resultados
     bar = '-------------------------------'
-    print(f'\n{bar}\n\nTempo de processamento: {datetime.now() - tic} \n\n--Resultado--\n\n{dict_solution}')
+    print(f'\n{bar}\n\nTotal Processing Time: {datetime.now() - tic} \n\n--Result--\n\n{dict_solution}')
