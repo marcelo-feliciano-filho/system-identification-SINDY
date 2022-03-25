@@ -98,8 +98,8 @@ class IdentifyF16BenchMark:
         model.fit(x_train, t=dt)
         model.print()
         
-        dict_plot = {2: f'{tipo_sis} - Acceleration Eixo X', 3: f'{tipo_sis} - Acceleration Eixo Y', 
-                     4: f'{tipo_sis} - Acceleration Eixo Z'}
+        dict_plot = {2: f'{tipo_sis} - Acceleration Axis X', 3: f'{tipo_sis} - Acceleration Axis Y', 
+                     4: f'{tipo_sis} - Acceleration Axis Z'}
         predito = model.predict(x_train)/100
             
         for index in dict_plot.keys():
